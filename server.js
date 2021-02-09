@@ -7,7 +7,7 @@ const compression = require("compression");
 
 //*** Express set up ***//
 //======================//
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3001;
 const app = express();
 
 //*** Middleware ***//
