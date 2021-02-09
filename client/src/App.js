@@ -1,8 +1,16 @@
 import React from 'react';
+import Jumbotron from './components/Jumbotron';
+import Navbar from './components/Navbar';
+import Searchbar from './components/Searchbar';
 
 function App() {
   return (
-   <h1>Hullo FuckFace</h1>
+   <>
+      <Navbar />
+      <Jumbotron />
+      <Searchbar />
+   </>
+   
   );
 }
 
