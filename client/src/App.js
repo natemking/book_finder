@@ -10,7 +10,6 @@ function App() {
       <Navbar />
       <main>
         <Jumbotron />
-        <Searchbar />
         <Container />
       </main>
    </>

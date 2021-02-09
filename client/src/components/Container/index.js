@@ -1,12 +1,18 @@
 import React from 'react';
 import Book from '../Book';
+import Searchbar from '../Searchbar';
+
 
 const Container = () => {
     return (
-        <section className='jumbotron container'>
-        <p>Results</p>
-            <Book />
-        </section>
+        <>
+             <Searchbar />
+             
+            <section className='jumbotron container'>
+                <p>Results</p>
+                <Book />
+            </section>
+        </>
     );
 }
  
