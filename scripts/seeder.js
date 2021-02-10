@@ -9,7 +9,7 @@ let bookSeed = [
         ],
         description: "Follows the adventures of Paul Atreides, the son of a betrayed duke given up for dead on a treacherous desert planet and adopted by its fierce, nomadic people, who help him unravel his most unexpected destiny.",
         image: "http://books.google.com/books/content?id=B1hSG45JCX4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-        link: "https://www.googleapis.com/books/v1/volumes/B1hSG45JCX4C",
+        link: "http://books.google.com/books?id=B1hSG45JCX4C&printsec=frontcover&dq=dune&hl=&cd=1&source=gbs_api",
     },
     {
         title: "Hyperion",

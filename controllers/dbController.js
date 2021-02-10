@@ -7,4 +7,16 @@ module.exports = {
             res.json(data)
         } catch (err) { console.error(err) }
     },
+    async saveOne(req, res) {
+        try {
+            
+        } catch (err) { console.error(err) } 
+    },
+    async deleteOne(req, res) {
+        try {
+            const data = await db.Book.findByIdAndDelete(req.params.id);
+            res.json(data)
+        } catch (err) { console.error(err) }
+    },
+
 }

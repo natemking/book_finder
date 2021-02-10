@@ -4,6 +4,6 @@ const dbController = require('../controllers/dbController');
 router.route('/books/:id?')
     .get(dbController.findAll)
 //     .post()
-//     .delete();
+    .delete(dbController.deleteOne)
 
 module.exports = router;

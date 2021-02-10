@@ -1,7 +1,9 @@
 import React from 'react';
-import ViewBtn from '../ViewBtn'
+import Button from '../Button';
 
-const Book = ({ key, title, authors, desc, img, link }) => {
+
+
+const Book = ({ id, title, authors, desc, img, link, btnType, onClick }) => {
 
     const writers = authors.map((author, i) => (i ? ', ' : '') + author)
 
@@ -16,11 +18,11 @@ const Book = ({ key, title, authors, desc, img, link }) => {
                 <section className='col-3 mt-3 d-flex justify-content-end'>
                     <section>
                         <a href={ link } target='_blank' rel='noreferrer'>
-                            <ViewBtn />
+                            <Button type='view' />
                         </a>
                     </section>
                     <section>
-                        <button type='button' className='btn btn-dark'>save</button>
+                        <Button id={ id } type={ btnType } onClick={ onClick }/>
                     </section>
                 </section>
             </section>
