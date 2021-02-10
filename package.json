@@ -13,6 +13,7 @@
     "build:client": "cd client && npm run build",
     "iall": "npm i && cd client && npm i",
     "startboth": "npm run server & npm run client",
+    "seed": "node scripts/seeder.js",
     "heroku-postbuild": "npm run build"
   },
   "keywords": [
