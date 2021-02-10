@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import BookContainer from '../components/BookContainer';
+import Book from '../components/Book'
 import API from '../utils/API'
 
 const SavedPage = () => {
-    const [books, setBooks] = useState('');
+    const [books, setBooks] = useState([]);
 
     useEffect(() => {
         loadBooks()
@@ -16,9 +17,21 @@ const SavedPage = () => {
         } catch (err) { console.log(err) }
     }
 
-    console.log(books);
+    const bookList = books.map(book => 
+        <Book 
+            key={book._id}
+            title={book.title}
+            authors={book.authors}
+            desc={book.description}
+            img={book.image}
+            link={book.link}
+        />
+    )
+    
     return ( 
-        <BookContainer />
+        <BookContainer title='Saved'>
+            { bookList }
+        </BookContainer>
     );
 }
  

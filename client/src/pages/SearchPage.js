@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Searchbar from '../components/Searchbar';
 import BookContainer from '../components/BookContainer'
+import Book from '../components/Book'
 
 const SearchPage = () => {
     const [search, setSearch] = useState('');
@@ -23,7 +24,9 @@ const SearchPage = () => {
                 onSubmit={handleBtnSubmit}
             />
     
-            <BookContainer />
+            <BookContainer title='Results'>
+                <Book />
+            </BookContainer>
        </>
     );
 }

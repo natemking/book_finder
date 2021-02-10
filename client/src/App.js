@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Jumbotron from './components/Jumbotron';
 import Navbar from './components/Navbar';
 import SavedPage from './pages/SavedPage';
@@ -11,9 +11,10 @@ function App() {
       <Navbar />
       <main>
         <Jumbotron />
-        <Route exact path="/" component={SearchPage} />
-        <Route exact path="/search" component={ SearchPage } />
-        <Route exact path="/saved" component={ SavedPage } />
+        <Switch>
+          <Route exact path={[ "/", "/search" ] }component={SearchPage} />
+          <Route exact path="/saved" component={ SavedPage } />
+        </Switch>
       </main>
    </Router>
    

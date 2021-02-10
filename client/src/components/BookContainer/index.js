@@ -1,12 +1,12 @@
 import React from 'react';
-import Book from '../Book';
 
-const BookContainer = () => {
+
+const BookContainer = ({ title, children }) => {
    
     return (
-        <section className='jumbotron container'>
-            <p>Results</p>
-            <Book />
+        <section className='jumbotron container border border-dark'>
+            <p>{ title }</p>
+            { children }
         </section>
     );
 }

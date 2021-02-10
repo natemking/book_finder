@@ -62,7 +62,7 @@ Licensed under the GNU GPLv3.0 License. Copyright © 2020
 
 ## Credits
 
-<!-- * [Use async/await with Mongoose connection](https://gist.github.com/emilioriosvz/abdbe137737b830b21d66dc5f1236311)
+<!-- * [Add a comma to map results if there are more then one result](https://stackoverflow.com/questions/47881767/how-to-add-a-comma-in-array-map-after-every-element-except-last-element-in-react)
 
 * [Set up mongoose models like sequelize model set up](https://gist.github.com/AKIRA-MIYAKE/03b9ae80dbdf61bf28ef)
 
