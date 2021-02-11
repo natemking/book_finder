@@ -15,7 +15,7 @@ const SearchPage = () => {
 
     const handleBtnSubmit = (e) => {
         e.preventDefault();
-
+        
         const searchForBook = async () =>{
             try {
             const results = await API.searchBooks(search.toLowerCase().trim());

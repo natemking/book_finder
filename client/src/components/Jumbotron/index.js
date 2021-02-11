@@ -4,15 +4,15 @@ const Jumbotron = () => {
     return (
         <section className="jumbotron container mt-5 text-center border border-dark">
             <h1 className="display-4">
-                The Librarian
+                (React) Google Books Search
             </h1>
             <p className="lead">
                 Search for and Save books of interest!
             </p>
-            <hr className="my-4" />
+            {/* <hr className="my-4" />
             <p>
                 Powered by React & Google Books
-            </p>
+            </p> */}
         </section>
     );
 }
