@@ -9,7 +9,7 @@ const Navbar = () => {
                 <span className="navbar-toggler-icon"></span>
             </button> */}
             {/* <div className="collapse navbar-collapse" id="navbarSupportedContent"> */}
-                <ul className="navbar-nav mr-auto">
+            <ul className="navbar-nav mr-auto d-flex flex-row w-100">
                     <li className="nav-item">
                         <Link to="/search" className="nav-link">
                             Search
