@@ -2,7 +2,7 @@ import React from 'react';
 
 const Searchbar = ({ onChange, onSubmit }) => {
     return (
-        <section className='jumbotron container mt-5'>
+        <section className='jumbotron container mt-5 border border-dark'>
 
             <h3>Book Search</h3>
 

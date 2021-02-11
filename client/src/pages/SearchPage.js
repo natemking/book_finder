@@ -15,17 +15,38 @@ const SearchPage = () => {
 
     const handleBtnSubmit = (e) => {
         e.preventDefault();
+
         const searchForBook = async () =>{
             try {
             const results = await API.searchBooks(search.toLowerCase().trim());
             setSearchResult(results.data.items);
-            console.log(searchResult);
             } catch (err) {console.error(err);}
         }    
         searchForBook();
     }
 
-    const results = searchResult.filter(book => (
+    const handleOnClick = (e) => {
+        const { id } = e.target;
+        
+        const choice = searchResult.filter(book => ( book.id === id))
+        
+        const sendSaveBook = async () => {
+            try {
+                await API.saveBook({
+                    title: choice[0].volumeInfo.title,
+                    authors: choice[0].volumeInfo.authors,
+                    description: choice[0].volumeInfo.description,
+                    image: choice[0].volumeInfo.imageLinks.thumbnail,
+                    link: choice[0].volumeInfo.previewLink
+                });
+                alert('Book saved!')
+            } catch (err) { console.error(err) }
+        }
+        sendSaveBook();
+    }
+
+    const results = searchResult === undefined ? <h3>No results. Please try again.</h3> :
+        searchResult.filter(book => (
         book.volumeInfo.hasOwnProperty('title') &&
         book.volumeInfo.hasOwnProperty('authors') &&
         book.volumeInfo.hasOwnProperty('description') &&
@@ -42,7 +63,7 @@ const SearchPage = () => {
             img={book.volumeInfo.imageLinks.thumbnail}
             link={book.volumeInfo.previewLink}
             btnType='save'
-            // onClick={handleOnClick}
+            onClick={handleOnClick}
         />
     )
 
@@ -53,8 +74,8 @@ const SearchPage = () => {
                 onSubmit={handleBtnSubmit}
             />
     
-            {searchResult.length === 0 ? null :
-             <BookContainer title='Results'>
+            {results.length === 0 ? null :
+             <BookContainer title={ searchResult === undefined ? '': 'Results' }>
                 { results }
             </BookContainer>}
        </>

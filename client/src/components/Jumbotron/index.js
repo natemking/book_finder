@@ -2,7 +2,7 @@ import React from 'react';
 
 const Jumbotron = () => {
     return (
-        <section className="jumbotron container mt-5 text-center">
+        <section className="jumbotron container mt-5 text-center border border-dark">
             <h1 className="display-4">
                 The Librarian
             </h1>

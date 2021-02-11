@@ -9,7 +9,9 @@ module.exports = {
     },
     async saveOne(req, res) {
         try {
-            
+            console.log(req.body);
+        const data = db.Book.create(req.body) 
+        res.json(data)
         } catch (err) { console.error(err) } 
     },
     async deleteOne(req, res) {

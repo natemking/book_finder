@@ -4,11 +4,10 @@ const apiController = require('../controllers/apiController');
 
 router.route('/savedbooks/:id?')
     .get(dbController.findAll)
-//     .post()
-    .delete(dbController.deleteOne)
+    .post(dbController.saveOne)
+    .delete(dbController.deleteOne);
 
 router.route('/search/:book?')
-    // .get(null)
-    .post(apiController.searchBooksAPI)
+    .post(apiController.searchBooksAPI);
 
 module.exports = router;
