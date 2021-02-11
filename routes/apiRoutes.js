@@ -2,7 +2,7 @@ const router = require('express').Router();
 const dbController = require('../controllers/dbController');
 const apiController = require('../controllers/apiController');
 
-router.route('/savedbooks/:id?')
+router.route('/books/:id?')
     .get(dbController.findAll)
     .post(dbController.saveOne)
     .delete(dbController.deleteOne);

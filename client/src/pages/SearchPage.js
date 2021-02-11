@@ -15,7 +15,7 @@ const SearchPage = () => {
 
     const handleBtnSubmit = (e) => {
         e.preventDefault();
-        
+        console.log(e.target.querySelector('button').className);
         const searchForBook = async () =>{
             try {
             const results = await API.searchBooks(search.toLowerCase().trim());
@@ -23,6 +23,8 @@ const SearchPage = () => {
             } catch (err) {console.error(err);}
         }    
         searchForBook();
+        e.target.querySelector('input').value = '';
+        // e.target.querySelector('button').className=''
     }
 
     const handleOnClick = (e) => {
@@ -70,6 +72,7 @@ const SearchPage = () => {
     return (
        <>
             <Searchbar
+                id='form'
                 onChange={handleOnChange}
                 onSubmit={handleBtnSubmit}
             />

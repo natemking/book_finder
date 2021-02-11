@@ -1,9 +1,9 @@
 import axios from 'axios'
 
 const API = {
-    getBooks() { return axios.get('/api/savedbooks')},
-    saveBook(bookData) { return axios.post('/api/savedbooks', bookData)},
-    deleteBook(id) { return axios.delete(`/api/savedbooks/${id}`)},
+    getBooks() { return axios.get('/api/books')},
+    saveBook(bookData) { return axios.post('/api/books', bookData)},
+    deleteBook(id) { return axios.delete(`/api/books/${id}`)},
 
     // getSearchResults() { return axios.get('/api/search')},
     searchBooks(book) {return axios.post(`/api/search/${book}`)}

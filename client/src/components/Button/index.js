@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CrudBtn = ({ id, type, onClick }) => {
+const Button = ({ id, type, onClick }) => {
     return ( 
         <button 
             id={ id } 
@@ -13,4 +13,4 @@ const CrudBtn = ({ id, type, onClick }) => {
      );
 }
  
-export default CrudBtn;
+export default Button;
