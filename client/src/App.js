@@ -12,8 +12,9 @@ function App() {
       <main>
         <Jumbotron />
         <Switch>
-          <Route exact path={[ "/", "/search" ] }component={SearchPage} />
+          <Route exact path={ [ "/", "/search" ] }component={SearchPage} />
           <Route exact path="/saved" component={ SavedPage } />
+          <Route component={SearchPage} />
         </Switch>
       </main>
    </Router>

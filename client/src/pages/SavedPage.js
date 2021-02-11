@@ -33,7 +33,8 @@ const SavedPage = () => {
             desc={book.description}
             img={book.image}
             link={book.link}
-            btnType='delete'
+            type='button'
+            btnName='Delete'
             onClick={ handleOnClick }
         />
     )
