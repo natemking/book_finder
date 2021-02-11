@@ -8,7 +8,7 @@ const Searchbar = ({ onChange, onSubmit }) => {
 
            <form className='form-group' onSubmit={ onSubmit }>
                 <label>Book</label>
-                <input className='form-control' type='text' onChange={ onChange } />
+                <input className='form-control' type='text' onChange={ onChange } required/>
                 <button type='submit' className='btn btn-dark mt-3 float-right lg-shadow'>Submit</button>
            </form>
 

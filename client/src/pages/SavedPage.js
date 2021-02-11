@@ -15,13 +15,11 @@ const SavedPage = () => {
         try {
             const response = await API.getBooks();
             setBooks(response.data);
-            console.log(books);
         } catch (err) { console.log(err) }
     }
 
     const handleOnClick = (e) => {
         const { id } = e.target;
-        console.log(id);
         API.deleteBook(id);
         loadBooks();
     }
