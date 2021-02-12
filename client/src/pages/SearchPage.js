@@ -3,10 +3,17 @@ import API from '../utils/API'
 import Searchbar from '../components/Searchbar';
 import BookContainer from '../components/BookContainer'
 import Book from '../components/Book'
+import ModalSave from '../components/Modal';
 
 const SearchPage = () => {
     const [search, setSearch] = useState('');
     const [searchResult, setSearchResult] = useState([]);
+    const [savedBook, setSavedBook] = useState('');
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const handleOnChange = (e) => {
         const { value } = e.target
@@ -40,7 +47,8 @@ const SearchPage = () => {
                     image: choice[0].volumeInfo.imageLinks.thumbnail,
                     link: choice[0].volumeInfo.previewLink
                 });
-                alert('Book saved!')
+                setSavedBook(choice[0].volumeInfo.title);
+                handleShow();
             } catch (err) { console.error(err) }
         }
         sendSaveBook();
@@ -82,6 +90,7 @@ const SearchPage = () => {
              <BookContainer title={ searchResult === undefined ? '': 'Results' }>
                 { results }
             </BookContainer>}
+            <ModalSave show={ show } handleClose={ handleClose } book={ savedBook }/>
        </>
     );
 }
