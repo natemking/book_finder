@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Search Google Books API for books and save them to your Library",
   "main": "server.js",
+  "engines": {
+    "node": "15.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
