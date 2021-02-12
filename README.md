@@ -45,6 +45,8 @@ The user can utilize the search bar to input a book title or author and then sub
 
 When the user navigates to the Saved page, a `useEffect` hook is used to run a function called `loadBooks()`. This function sends an Axios GET request to the server. The server then sends the request to `dbController` where it finds all books that are stored in the MongoDB and responds with the data. This data is then mapped on the search page and each book is rendered into its own `Book` component. Again the `Book` component renders two buttons but this time there is a Delete button with the View button. All of the buttons in this app are rendered from the singular `Button` component. How the button displays and operates are all controlled via props. When the user clicks the delete button the id of that book is sent to the server and then to the controller to be deleted. Lastly, the `loadBooks` function is called again to render the new list.  
 
+I have also added a service worker to for this app to be a PWA.
+
 
 ## Dependencies
 ```
