@@ -1,18 +1,15 @@
 import React from 'react';
 
 const Jumbotron = () => {
+    // Render main jumbo
     return (
-        <section className="jumbotron container mt-5 text-center border border-dark">
+        <section className="jumbotron container mt-md-5 text-center border border-dark">
             <h1 className="display-4">
                 (React) Google Books Search
             </h1>
             <p className="lead">
                 Search for and Save books of interest!
             </p>
-            {/* <hr className="my-4" />
-            <p>
-                Powered by React & Google Books
-            </p> */}
         </section>
     );
 }

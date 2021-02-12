@@ -1,25 +1,27 @@
 import React, { useState } from 'react';
-import API from '../utils/API'
+import API from '../utils/API';
 import Searchbar from '../components/Searchbar';
-import BookContainer from '../components/BookContainer'
-import Book from '../components/Book'
+import BookContainer from '../components/BookContainer';
+import Book from '../components/Book';
 import ModalSave from '../components/Modal';
 
 const SearchPage = () => {
+    // State for the book that is being searched
     const [search, setSearch] = useState('');
+    // State for the results of the book searched
     const [searchResult, setSearchResult] = useState([]);
+    // State for the book to be saved to DB
     const [savedBook, setSavedBook] = useState('');
-
+    // State to show a modal post save
     const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
+    // Set search state as the user types input
     const handleOnChange = (e) => {
         const { value } = e.target
         setSearch(value)
     }
 
+    // On search btn submit, send the searched for book to the server and set the search results state on response
     const handleBtnSubmit = (e) => {
         e.preventDefault();
        
@@ -33,6 +35,7 @@ const SearchPage = () => {
         e.target.querySelector('input').value = '';
     }
 
+    // On save button click, send book to the server/DB, set saved book state, & display confirmation modal
     const handleOnClick = (e) => {
         const { id } = e.target;
         
@@ -54,6 +57,11 @@ const SearchPage = () => {
         sendSaveBook();
     }
 
+    // Functions for showing and closing the modal
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    // Validate for results from search then filter out only the results that have all of the info needed and then map each to a book component
     const results = searchResult === undefined ? <h3>No results. Please try again.</h3> :
         searchResult.filter(book => (
         book.volumeInfo.hasOwnProperty('title') &&
@@ -76,7 +84,8 @@ const SearchPage = () => {
             onClick={handleOnClick}
         />
     )
-
+    
+    // Render the search bar and search results
     return (
        <>
             <Searchbar
@@ -87,7 +96,7 @@ const SearchPage = () => {
             />
     
             {results.length === 0 ? null :
-             <BookContainer title={ searchResult === undefined ? '': 'Results' }>
+             <BookContainer heading={ searchResult === undefined ? '': 'Results' }>
                 { results }
             </BookContainer>}
             <ModalSave show={ show } handleClose={ handleClose } book={ savedBook }/>

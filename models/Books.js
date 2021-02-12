@@ -1,3 +1,5 @@
+// Book model //
+//============//
 module.exports = (mongoose, Schema) => {
     const BookSchema = new Schema({
         title: String,

@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-const BookContainer = ({ title, children }) => {
-   
+const BookContainer = ({ heading, children }) => {
+   // Render book list container
     return (
         <section className='jumbotron container border border-dark'>
-            <p>{ title }</p>
+            <p>{ heading }</p>
             { children }
         </section>
     );

@@ -6,6 +6,7 @@ import SavedPage from './pages/SavedPage';
 import SearchPage from './pages/SearchPage';
 
 function App() {
+  // Render App and route 
   return (
    <Router>
       <Navbar />
