@@ -16,6 +16,7 @@
     "seed": "node scripts/seeder.js",
     "heroku-postbuild": "npm run build"
   },
+  "heroku-run-build-script": true,
   "keywords": [
     "books",
     "search"
