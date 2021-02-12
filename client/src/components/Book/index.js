@@ -3,7 +3,7 @@ import Button from '../Button';
 
 
 const Book = ({ id, title, authors, desc, img, link, type, btnName, onClick }) => {
-
+    
     const writers = authors.map((author, i) => (i ? ', ' : '') + author)
 
     return (
