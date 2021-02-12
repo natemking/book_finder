@@ -19,6 +19,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
+//*** Serve up static assets(heroku) ***//
+//======================================//
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+}
+
 //*** Routers ***//
 //===============//
 app.use(routes);
