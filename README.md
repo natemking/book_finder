@@ -51,7 +51,7 @@ I have also added a service worker to for this app to be a PWA.
 ## Dependencies
 ```
 |-----------------------------------------|
-|Server             |Client (not from CRA |
+|Server             |Client               |
 |-------------------|---------------------|
 |axios              |axios                |
 |compression        |bootstrap            |
@@ -62,6 +62,7 @@ I have also added a service worker to for this app to be a PWA.
 |morgan             |                     |
 |concurrently (dev) |                     |
 |-----------------------------------------|
+*** client dependencies are on top of the boilerplate's from create-react-app ***
 ```
 
 ## Screenshots
