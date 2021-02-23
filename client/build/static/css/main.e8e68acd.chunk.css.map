@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAIA,8BAHI,+BAMJ,CAHA,uBACG,YAEH","file":"main.e8e68acd.chunk.css","sourcesContent":["button {\n    box-shadow: 5px 7px 10px #909090;\n}\n\n.btn:focus,.btn:active {\n   outline: none ;\n   box-shadow: 5px 7px 10px #909090;\n}\n"]}
